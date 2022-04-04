@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+:root {
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+
+  --font-family-spartan: 'Spartan', sans-serif;
+  --font-family-work-sans: 'Work Sans', sans-serif;
+}
+
+.sr-only {
+  visibility: hidden;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main {
+  background-color: var(--body-bg-color);
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3.6rem;
+}
+
+.container img.logo {
+  width: 38.9rem;
+}
+
+.container h1 {
+  color: var(--title-color);
+  font-family: var(--font-family-work-sans);
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  margin-top: 9.2rem;
+}
+
+.container h2 {
+  color: var(--text-color);
+  font-family: var(--font-family-spartan);
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  margin-top: .856rem;
+}
+
+.container p {
+  color: var(--text-color);
+  font-family: var(--font-family-spartan);
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  margin-top: .9rem;
+}
+
+form {
+  margin-top: 5rem;
+  position: relative;
+}
+
+label.input-email {
+  color: var(--form-color);
+  font-size: 1.4rem;
+  font-family: var(--font-family-spartan);
+  font-weight: 700;
+}
+
+input#c-email {
+  border: none;
+  border-left: .5rem solid var(--title-color);
+  width: 75rem;
+  height: 4.8rem;
+  outline: none;
+
+  font-family: var(--font-family-work-sans);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-indent: 1.5rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #8257e5;
+
+  width: 4.8rem;
+  height: 4.8rem;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+div#input_button {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+
+  margin-top: 1.7rem;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+a.ler {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 11.5rem;
+
+  text-decoration: none;
+}
+
+p.ler {
+  font-size: 1.4rem;
+  font-family: var(--font-family-spartan);
+  font-weight: 700;
+  color: var(--bg-button-color);
+  line-height: normal;
+  margin: 0;
+  margin-right: .5rem;
+}
+
+div.background {
+  background-image: url(../assets/read_news.webp);
+  background-position: 70% 50%;
+  background-size: auto 100%;
+  height: 100vh
+}
