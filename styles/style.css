@@ -17,8 +17,10 @@
   width: 1px;
   height: 1px;
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: 0px;
+  left: 0px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
 }
 
 * {
@@ -33,10 +35,13 @@ html {
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
 }
 
 main {
   background-color: var(--body-bg-color);
+  height: 100%;
 }
 
 .container {
@@ -153,5 +158,27 @@ div.background {
   background-image: url(../assets/read_news.webp);
   background-position: 70% 50%;
   background-size: auto 100%;
-  height: 100vh
+  height: 100%;
+}
+
+@media(max-width: 414px) {
+  html {
+    font-size: 20%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  div.background {
+    display: none;
+  }
 }
